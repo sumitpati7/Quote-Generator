@@ -1,0 +1,60 @@
+:root {
+  --bg-color: #060706;
+  --bg-frame: #212322;
+
+  --color-dark-text: #fefefe;
+}
+
+body.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--color-dark-text);
+}
+
+.dark-mode #home .home-container {
+  background-color: var(--bg-frame);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+.dark-mode .home-container a {
+  color: var(--bg-color);
+}
+
+.dark-mode header nav a,
+.dark-mode header i {
+  color: var(--color-dark-text);
+}
+
+.dark-mode #generate .generate-container {
+  background-color: var(--bg-frame);
+}
+
+.dark-mode #generate .generate-container .copy-button:hover {
+  background-color: rgba(65, 4, 126, 0.4);
+}
+
+.dark-mode .generate-container .buttons .button-group {
+  background-color: rgba(65, 4, 126, 0.2);
+}
+
+.dark-mode .button-group .controllers .button-transparent {
+  color: #fefefe;
+}
+
+.dark-mode .generate-container .buttons .button-group span {
+  font-size: 12px;
+  color: #fefefe;
+}
+
+.dark-mode footer .footerBottom .contacts .footer-button {
+  color: var(--color-dark-text);
+}
+
+.dark-mode footer .footerBottom .copy-right {
+  margin-top: 10px;
+  color: var(--color-dark-text);
+}
+
+.dark-mode footer .footerBottom .copy-right .designer {
+  font-weight: 600;
+  color: var(--color-dark-text);
+}

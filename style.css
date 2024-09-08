@@ -3,6 +3,8 @@
   --color-frame: #fefefe;
   --color-primary: #41047e;
 
+  --color-light-text: #060706;
+
   /* font-sizes */
   --font-xxl: 25px;
 }
@@ -36,7 +38,7 @@ header nav {
 
 header nav a {
   text-decoration: none;
-  color: var(--color-frame);
+  color: var(--color-light-text);
 }
 
 .navigation {
@@ -59,7 +61,7 @@ header nav a {
 }
 
 .toggle i {
-  color: var(--color-frame);
+  color: var(--color-light-text);
   font-size: 25px;
 }
 
@@ -83,7 +85,7 @@ header nav a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-bg);
+  background-color: var(--color-light-text);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -101,11 +103,11 @@ header nav a {
 }
 
 .toggle .toggle-switch input:checked + .slider {
-  background-color: #060706;
+  background-color: var(--color-bg);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #060706;
+  box-shadow: 0 0 1px var(--color-bg);
 }
 
 input:checked + .slider:before {
@@ -142,20 +144,20 @@ input:checked + .slider:before {
 
 .home-container h2 {
   font-size: 65px;
-  font-family: "Playwrite CU", cursive;
+  font-family: "Roboto Mono", cursive;
   font-weight: 700;
 }
 
 .home-container p {
   font-size: 30px;
-  /* font-family: "Playwrite CU", cursive; */
+  /* font-family: "Roboto Mono", cursive; */
   font-weight: 600;
 }
 
 .home-container a {
   margin-top: 35px;
   text-decoration: none;
-  /* font-family: "Playwrite CU", cursive; */
+  /* font-family: "Roboto Mono", cursive; */
   font-weight: 500;
   background-color: #41047e;
   color: var(--color-frame);
@@ -200,7 +202,7 @@ input:checked + .slider:before {
   font-size: 45px;
   text-align: center;
   font-weight: 700;
-  font-family: "Playwrite CU", cursive;
+  font-family: "Roboto Mono", cursive;
 }
 
 .generate-container #quoted-by {
@@ -208,8 +210,26 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 
-.controller label {
-  margin-right: 25px;
+.generate-container .buttons .button-group {
+  display: flex;
+  flex-direction: column;
+  max-height: 52px;
+  background-color: rgba(65, 4, 126, 0.1);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 5px;
+}
+
+.generate-container .buttons .button-group span {
+  font-size: 12px;
+}
+
+.generate-container .buttons .button-group .controllers {
+  display: flex;
+  gap: 40px;
 }
 
 .generate-container .buttons {
@@ -227,6 +247,14 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.generate-container .copy-button button {
+  color: var(--color-primary);
+  font-size: 25px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
 .generate-container .copy-button:hover {
   background-color: rgba(65, 4, 126, 0.1);
 }
@@ -236,13 +264,13 @@ input:checked + .slider:before {
   border-radius: 8px;
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
-  color: var(--color-frame);
+  color: var(--color-light-text);
   font-size: 20px;
   min-height: 44px;
 }
 
 .generate-container .buttons .category-select {
-  color: var(--color-frame);
+  color: var(--color-light-text);
   border: 1px solid var(--color-primary);
   background-color: var(--color-primary);
   padding: 8px;
@@ -250,13 +278,17 @@ input:checked + .slider:before {
   font-size: 20px;
 }
 
-.button-transparent {
+.button-group .controllers .button-transparent {
   font-size: 18px;
   background-color: transparent;
   color: var(--color-primary);
   padding: 8px;
-  border-radius: 8px;
   border: none;
+  border-radius: 50%;
+}
+
+.button-group .controllers .button-transparent:hover {
+  background-color: rgba(65, 4, 126, 0.3);
 }
 
 footer {
@@ -271,7 +303,7 @@ footer .footerBottom {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  color: var(--color-frame);
+  color: var(--color-light-text);
 }
 
 footer .footerBottom .copy-right {
@@ -289,13 +321,14 @@ footer .footerBottom .contacts {
 
 footer .footerBottom .contacts .footer-button {
   padding: 12px;
-  color: var(--color-frame);
+  color: var(--color-light-text);
   font-size: 25px;
   border-radius: 50%;
 }
 
 footer .footerBottom .contacts .footer-button:hover {
   background-color: rgba(248, 248, 248, 0.1);
+  transform: scale(1.1);
 }
 
 #toast-container {

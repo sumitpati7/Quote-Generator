@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
     <link rel="stylesheet" href="/style.css"></link>
+    <link rel="stylesheet" href="/dark-mode.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="icon" href="/images/logo.png">
 </head>
 <body>
     <header>
@@ -23,7 +25,7 @@
             </div>
             <div class="toggle" >
                 <i class="fa-regular fa-sun" title="Light Mode"></i>
-                <label class="toggle-switch" title="toggle">
+                <label class="toggle-switch" id="toggle-switch" title="toggle">
                     <input type="checkbox">
                     <span class="slider"></span>
                 </label>
@@ -42,14 +44,20 @@
         <section id="generate">
             <div class="generate-container">
                 <div class="copy-button">
-                    <button class="button-transparent" onclick="copyQuote()" title="Copy Quote"><i class="fa-regular fa-clipboard"></i></button>
+                    <button onclick="copyQuote()" title="Copy Quote"><i class="fa-regular fa-clipboard"></i></button>
                 </div>
                 
                 <p id="quote" class="quote"></p>
                 <p id="quoted-by"></p>
                 <div class="buttons">
-                    <button class="button-transparent" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
-                    <button class="button-transparent" onclick="previousQuote()" id="previous-quote" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="button-group">
+                    <span>Font</span>
+                        <div class="controllers">
+                            <button class="button-transparent" onclick="fontChange('add')" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
+                            <button class="button-transparent" onclick="fontChange('sub')" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>
+                    
                     <button class="button" onclick="generateRandomQuote()" title="Random Quote">Random <i class="fa-solid fa-shuffle"></i></button>
                     <select onchange="categoryChange(this)" id="category-select" name="category" title="Category" class="category-select" id="category">
                         <option value="science">Science</option>
@@ -57,8 +65,14 @@
                         <option value="time">Time</option>
                         <option value="movies">Movies</option>
                     </select>
-                    <button class="button-transparent" onclick="nextQuote()" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
-                    <button class="button-transparent" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
+                    <div class="button-group">
+                    <span>Change Quote</span>
+                        <div class="controllers">
+                            <button class="button-transparent" onclick="previousQuote()" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button class="button-transparent" onclick="nextQuote()" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>           
             <div id="toast-container"></div>
@@ -78,6 +92,7 @@
         </p>
       </div>
     </footer>
+    <script src="/font-size.js"></script>
     <script src="/copy-quote.js"></script>
     <script src="/script.js"></script>
 </body>

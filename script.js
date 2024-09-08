@@ -220,7 +220,7 @@ const quotes = [
 
 let quote_text = document.getElementById("quote");
 let quoted_by_text = document.getElementById("quoted-by");
-
+let toggle_switch = document.getElementById("toggle-switch");
 let selected_quote_list = quotes.filter((d) => d.category === "science");
 let selected_category = "science"; //initially science is selected
 let quoteNumber = 0;
@@ -288,5 +288,9 @@ function displayQuote() {
   reset();
   typeQuote();
 }
+
+toggle_switch.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
 
 displayQuote();
