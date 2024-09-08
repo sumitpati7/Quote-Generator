@@ -178,7 +178,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100dvh - 65px);
+  height: calc(100dvh - 100px);
 }
 
 #generate .generate-container {
@@ -222,6 +222,12 @@ input:checked + .slider:before {
   position: absolute;
   top: 25px;
   right: 25px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.generate-container .copy-button:hover {
+  background-color: rgba(65, 4, 126, 0.1);
 }
 
 .generate-container .buttons .button {
@@ -259,7 +265,7 @@ footer {
 footer .footerBottom {
   position: sticky;
   bottom: 0;
-  height: 65px;
+  height: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -267,10 +273,26 @@ footer .footerBottom {
   color: var(--color-frame);
 }
 
-footer .footerBottom .designer {
+footer .footerBottom .copy-right {
+  margin-top: 10px;
+}
+
+footer .footerBottom .copy-right .designer {
   font-weight: 600;
 }
 
+footer .footerBottom .contacts {
+  display: flex;
+  gap: 20px;
+}
+
 footer .footerBottom .contacts .footer-button {
+  padding: 12px;
   color: var(--color-frame);
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+footer .footerBottom .contacts .footer-button:hover {
+  background-color: rgba(248, 248, 248, 0.1);
 }

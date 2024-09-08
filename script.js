@@ -289,4 +289,10 @@ function displayQuote() {
   typeQuote();
 }
 
+function copyQuote() {
+  quote = document.getElementById("quote").innerText;
+  quoted_by = document.getElementById("quoted-by").innerText;
+  navigator.clipboard.writeText(quote + quoted_by);
+}
+
 displayQuote();
