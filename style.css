@@ -14,7 +14,7 @@ html {
 * {
   padding: 0;
   margin: 0;
-  font-family: "Playwrite CU", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -31,6 +31,7 @@ header nav {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5;
 }
 
 header nav a {
@@ -112,15 +113,15 @@ input:checked + .slider:before {
 }
 
 #home,
-#generate,
-#about {
-  height: 100vh;
+#generate {
   color: var(--color-primary);
-  border-bottom: 1px solid black;
   width: 100%;
 }
 
+/* Home Section CSS */
+
 #home {
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,14 +148,14 @@ input:checked + .slider:before {
 
 .home-container p {
   font-size: 30px;
-  font-family: "Playwrite CU", cursive;
+  /* font-family: "Playwrite CU", cursive; */
   font-weight: 600;
 }
 
 .home-container a {
   margin-top: 35px;
   text-decoration: none;
-  font-family: "Playwrite CU", cursive;
+  /* font-family: "Playwrite CU", cursive; */
   font-weight: 500;
   background-color: #41047e;
   color: var(--color-frame);
@@ -168,4 +169,108 @@ input:checked + .slider:before {
   background-color: var(--color-bg);
   color: var(--color-primary);
   font-weight: 600;
+}
+
+/* Generate Section CSS */
+
+#generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100dvh - 65px);
+}
+
+#generate .generate-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 70%;
+  background-color: var(--color-frame);
+  padding: 45px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.generate-container #quote {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Playwrite CU", cursive;
+}
+
+.generate-container #quoted-by {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.controller label {
+  margin-right: 25px;
+}
+
+.generate-container .buttons {
+  position: absolute;
+  bottom: 16px;
+  display: flex;
+  gap: 40px;
+}
+
+.generate-container .copy-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.generate-container .buttons .button {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-frame);
+  font-size: 20px;
+  min-height: 44px;
+}
+
+.generate-container .buttons .category-select {
+  color: var(--color-frame);
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.button-transparent {
+  font-size: 18px;
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+footer {
+  background-color: var(--color-primary);
+}
+
+footer .footerBottom {
+  position: sticky;
+  bottom: 0;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-frame);
+}
+
+footer .footerBottom .designer {
+  font-weight: 600;
+}
+
+footer .footerBottom .contacts .footer-button {
+  color: var(--color-frame);
 }

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,7 +19,6 @@
                 <ul class="navigation-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#generate">Generate</a></li>
-                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
             <div class="toggle" >
@@ -39,9 +39,44 @@
                 <a href="#generate">Start Generating <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </section>
-
-        <section id="generate"></section>
-        <section id="about"></section>
+        <section id="generate">
+            <div class="generate-container">
+                <div class="copy-button">
+                    <button class="button-transparent" title="Copy Quote"><i class="fa-regular fa-clipboard"></i></button>
+                </div>
+                
+                <p id="quote" class="quote">" Time and tide wait for no man. "</p>
+                <p id="quoted-by">Geoffrey Chaucer</p>
+                <div class="buttons">
+                    <button class="button-transparent" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
+                    <button class="button-transparent" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="button" title="Random Quote">Random <i class="fa-solid fa-shuffle"></i></button>
+                    <select name="category" title="Category" class="category-select" id="category">
+                        <option disabled selected>--Category--</option>
+                        <option value="science">Science</option>
+                        <option value="math">Math</option>
+                        <option value="time">Time</option>
+                        <option value="movies">Movies</option>
+                    </select>
+                    <button class="button-transparent" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="button-transparent" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="footerBottom">
+        <p>
+          Copyright &copy;2023; Designed by
+          <span class="designer">Sumit Pati</span>
+        </p>
+        <div class="contacts">
+            <button class="button-transparent footer-button"><i class="fa-brands fa-facebook-f"></i></button>
+            <button class="button-transparent footer-button"><i class="fa-brands fa-github"></i></button>
+            <button class="button-transparent footer-button"><i class="fa-brands fa-instagram"></i></button>
+            <button class="button-transparent footer-button"><i class="fa-brands fa-linkedin"></i></button>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
