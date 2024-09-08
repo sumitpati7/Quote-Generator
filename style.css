@@ -179,6 +179,7 @@ input:checked + .slider:before {
   align-items: center;
   flex-direction: column;
   height: calc(100dvh - 100px);
+  position: relative;
 }
 
 #generate .generate-container {
@@ -295,4 +296,27 @@ footer .footerBottom .contacts .footer-button {
 
 footer .footerBottom .contacts .footer-button:hover {
   background-color: rgba(248, 248, 248, 0.1);
+}
+
+#toast-container {
+  position: absolute;
+  bottom: 25px;
+  left: 45%;
+}
+
+@keyframes moveup {
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+#toast-container .toast {
+  background-color: rgba(65, 4, 126, 0.1);
+  padding: 8px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(300%);
+  animation: moveup 0.4s linear both;
+  margin-bottom: 5px;
 }
