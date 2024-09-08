@@ -45,20 +45,19 @@
                     <button class="button-transparent" title="Copy Quote"><i class="fa-regular fa-clipboard"></i></button>
                 </div>
                 
-                <p id="quote" class="quote">" Time and tide wait for no man. "</p>
-                <p id="quoted-by">Geoffrey Chaucer</p>
+                <p id="quote" class="quote"></p>
+                <p id="quoted-by"></p>
                 <div class="buttons">
                     <button class="button-transparent" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
-                    <button class="button-transparent" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button class="button" title="Random Quote">Random <i class="fa-solid fa-shuffle"></i></button>
-                    <select name="category" title="Category" class="category-select" id="category">
-                        <option disabled selected>--Category--</option>
+                    <button class="button-transparent" onclick="previousQuote()" id="previous-quote" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="button" onclick="generateRandomQuote()" title="Random Quote">Random <i class="fa-solid fa-shuffle"></i></button>
+                    <select onchange="categoryChange(this)" id="category-select" name="category" title="Category" class="category-select" id="category">
                         <option value="science">Science</option>
-                        <option value="math">Math</option>
+                        <option value="maths">Math</option>
                         <option value="time">Time</option>
                         <option value="movies">Movies</option>
                     </select>
-                    <button class="button-transparent" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="button-transparent" onclick="nextQuote()" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
                     <button class="button-transparent" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
                 </div>
             </div>
@@ -67,7 +66,7 @@
     <footer>
         <div class="footerBottom">
         <p>
-          Copyright &copy;2023; Designed by
+          Copyright &copy;2024; Designed by
           <span class="designer">Sumit Pati</span>
         </p>
         <div class="contacts">
@@ -78,5 +77,6 @@
         </div>
       </div>
     </footer>
+    <script src="/script.js"></script>
 </body>
 </html>
