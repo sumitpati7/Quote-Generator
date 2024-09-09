@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
-    <link rel="stylesheet" href="/style.css"></link>
-    <link rel="stylesheet" href="/dark-mode.css"></link>
+    <link rel="stylesheet" href="/css/style.css"></link>
+    <link rel="stylesheet" href="/css/dark-mode.css"></link>
+    <link rel="stylesheet" href="/css/responsive.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +18,6 @@
     <header>
         <nav>
             <a href="#">Quote Generator</a>
-            <div class="navigation">
-                <ul class="navigation-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#generate">Generate</a></li>
-                </ul>
-            </div>
             <div class="toggle" >
                 <i class="fa-regular fa-sun" title="Light Mode"></i>
                 <label class="toggle-switch" id="toggle-switch" title="toggle">
@@ -43,18 +38,26 @@
         </section>
         <section id="generate">
             <div class="generate-container">
+                <div class="select-mobile">
+                    <select onchange="categoryChange(this)" id="category-select" name="category" title="Category" class="category-select" id="category">
+                        <option value="science">Science</option>
+                        <option value="maths">Math</option>
+                        <option value="time">Time</option>
+                        <option value="movies">Movies</option>
+                    </select>
+                </div>
                 <div class="copy-button">
                     <button onclick="copyQuote()" title="Copy Quote"><i class="fa-regular fa-clipboard"></i></button>
                 </div>
-                
                 <p id="quote" class="quote"></p>
                 <p id="quoted-by"></p>
+                
                 <div class="buttons">
                     <div class="button-group">
                     <span>Font</span>
                         <div class="controllers">
-                            <button class="button-transparent" onclick="fontChange('add')" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
                             <button class="button-transparent" onclick="fontChange('sub')" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
+                            <button class="button-transparent" onclick="fontChange('add')" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                     
@@ -72,7 +75,30 @@
                             <button class="button-transparent" onclick="nextQuote()" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </div>
+
                     
+                </div>
+                <div class="buttons-mobile">
+                    <div class="button-group">
+                        <label>Font Dec</label>
+                        <button class="button-transparent" onclick="fontChange('sub')" title="Font Decrease"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <div class="button-group">
+                        <label>Previous</label>
+                        <button class="button-transparent" onclick="previousQuote()" title="Previous Quote"><i class="fa-solid fa-arrow-left"></i></button>
+                    </div>
+                    <div class="button-group">
+                        <label>Random</label>
+                        <button class="button-transparent" onclick="generateRandomQuote()" title="Random Quote"><i class="fa-solid fa-shuffle"></i></button>
+                    </div>
+                    <div class="button-group">
+                        <label>Next</label>
+                        <button class="button-transparent" onclick="nextQuote()" title="Next Quote"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="button-group">
+                        <label>Font Inc</label>
+                        <button class="button-transparent" onclick="fontChange('add')" title="Font Increase"><i class="fa-solid fa-plus"></i></button>
+                    </div>
                 </div>
             </div>           
             <div id="toast-container"></div>
@@ -81,10 +107,10 @@
     <footer>
         <div class="footerBottom">
         <div class="contacts">
-            <a class="footer-button" href="https://www.facebook.com/sumit.pati.319"><i class="fa-brands fa-facebook-f"></i></a>
-            <a class="footer-button" href="https://github.com/sumitpati7"><i class="fa-brands fa-github"></i></a>
-            <a class="footer-button" href="https://www.instagram.com/sumitpati7 "><i class="fa-brands fa-instagram"></i></a>
-            <a class="footer-button" href="https://www.linkedin.com/in/sumit-pati-a387b222b"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="footer-button" target="_blank" href="https://www.facebook.com/sumit.pati.319"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="footer-button" target="_blank" href="https://github.com/sumitpati7"><i class="fa-brands fa-github"></i></a>
+            <a class="footer-button" target="_blank" href="https://www.instagram.com/sumitpati7 "><i class="fa-brands fa-instagram"></i></a>
+            <a class="footer-button" target="_blank" href="https://www.linkedin.com/in/sumit-pati-a387b222b"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <p class="copy-right">
           Copyright &copy;2024; Designed by
@@ -92,8 +118,8 @@
         </p>
       </div>
     </footer>
-    <script src="/font-size.js"></script>
-    <script src="/copy-quote.js"></script>
-    <script src="/script.js"></script>
+    <script src="/JS/font-size.js"></script>
+    <script src="/JS/copy-quote.js"></script>
+    <script src="/JS/script.js"></script>
 </body>
 </html>

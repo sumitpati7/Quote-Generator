@@ -1,10 +1,19 @@
 let toastContainer = document.getElementById("toast-container");
 
 function copyQuote() {
-  showToast();
   quote = document.getElementById("quote").innerText;
   quoted_by = document.getElementById("quoted-by").innerText;
-  navigator.clipboard.writeText(quote + quoted_by);
+  const textArea = document.createElement("textarea");
+  textArea.value = quote + quoted_by;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Failed to copy text: ", err);
+  }
+  document.body.removeChild(textArea);
+  showToast();
 }
 
 function showToast() {

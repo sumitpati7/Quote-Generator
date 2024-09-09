@@ -2,7 +2,7 @@
   --bg-color: #060706;
   --bg-frame: #212322;
 
-  --color-dark-text: #fefefe;
+  --color-dark-text: #bf00ff;
 }
 
 body.dark-mode {
@@ -16,7 +16,7 @@ body.dark-mode {
 }
 
 .dark-mode .home-container a {
-  color: var(--bg-color);
+  color: var(--color-dark-text);
 }
 
 .dark-mode header nav a,
@@ -42,7 +42,15 @@ body.dark-mode {
 
 .dark-mode .generate-container .buttons .button-group span {
   font-size: 12px;
-  color: #fefefe;
+  color: var(--color-dark-text);
+}
+
+.dark-mode .generate-container .buttons button {
+  color: var(--color-dark-text);
+}
+
+.dark-mode .generate-container .buttons select {
+  color: var(--color-dark-text);
 }
 
 .dark-mode footer .footerBottom .contacts .footer-button {
