@@ -277,7 +277,7 @@ function typeQuote() {
   let text = selected_quote_list[quoteNumber].quote;
   if (i < text.length) {
     quote_text.innerHTML += text[i++];
-    setTimeout(typeQuote, 80);
+    setTimeout(typeQuote, 50);
   } else {
     quoted_by_text.innerText = `--` + selected_quote_list[quoteNumber].author;
   }
