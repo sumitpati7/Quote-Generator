@@ -294,3 +294,34 @@ toggle_switch.addEventListener("change", () => {
 });
 
 displayQuote();
+
+let toastContainer = document.getElementById("toast-container");
+
+function copyQuote() {
+  const textArea = document.createElement("textarea");
+  textArea.value =
+    selected_quote_list[quoteNumber].quote +
+    "--" +
+    selected_quote_list[quoteNumber].author;
+  document.body.appendChild(textArea);
+  textArea.select();
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Failed to copy text: ", err);
+  }
+  document.body.removeChild(textArea);
+  showToast();
+}
+
+function showToast() {
+  let toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.innerHTML = `Quote Copied Successfully!`;
+
+  toastContainer.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
