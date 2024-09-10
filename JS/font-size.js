@@ -5,6 +5,7 @@ function fontChange(operation) {
   let max_font = 55;
   let min_font = 15;
   let width = window.innerWidth;
+  //set limit according to the device width.
   if (width < 500) {
     max_font = 35;
   }

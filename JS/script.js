@@ -259,6 +259,7 @@ function generateRandomQuote() {
   reset();
   let random_number = generateRandomNumber();
   if (quoteNumber !== random_number) {
+    //prevents same quote to be displayed twice.
     quoteNumber = random_number;
     displayQuote();
     return;
