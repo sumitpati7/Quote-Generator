@@ -313,6 +313,11 @@ footer .footerBottom .copy-right {
 
 footer .footerBottom .copy-right .designer {
   font-weight: 600;
+  color: inherit;
+}
+
+footer .footerBottom .copy-right .designer:hover {
+  color: inherit;
 }
 
 footer .footerBottom .contacts {
