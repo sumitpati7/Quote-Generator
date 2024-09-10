@@ -190,11 +190,6 @@ input:checked + .slider:before {
   margin-top: 70px;
 }
 
-.generate-container .select-mobile {
-  display: none;
-  position: absolute;
-}
-
 .generate-container #quote {
   font-size: 45px;
   text-align: center;
@@ -270,10 +265,15 @@ input:checked + .slider:before {
   min-height: 44px;
 }
 
-.generate-container .buttons .category-select {
+.generate-container .select {
+  position: absolute;
+  top: 16px;
+}
+
+.generate-container .select select {
   color: var(--color-primary);
-  border: 1px solid rgba(65, 4, 126, 0.1);
-  background-color: rgba(65, 4, 126, 0.1);
+  border: none;
+  background-color: transparent;
   padding: 8px;
   border-radius: 8px;
   font-size: 20px;

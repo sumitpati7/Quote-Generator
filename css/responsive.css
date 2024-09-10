@@ -104,38 +104,6 @@
     color: var(--color-frame);
   }
 
-  .generate-container .select-mobile {
-    display: inline;
-    top: 16px;
-  }
-
-  .generate-container .select-mobile select {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    color: var(--color-primary);
-  }
-
-  .dark-mode .generate-container .select-mobile select {
-    color: var(--color-frame);
-  }
-
-  .generate-container .select-mobile select:focus {
-    border: none;
-  }
-
-  .generate-container .select-mobile select option {
-    background-color: transparent;
-  }
-
-  .dark-mode .generate-container .select-mobile select option {
-    color: var(--color-primary);
-  }
-
-  .generate-container .select-mobile select option:focus {
-    background-color: transparent;
-  }
-
   .generate-container #quote {
     font-size: 25px;
   }
