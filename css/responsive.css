@@ -180,6 +180,11 @@
     font-size: 8px;
   }
 
+  #toast-container {
+    bottom: 130px;
+    left: 25%;
+  }
+
   footer {
     height: 25px;
   }
