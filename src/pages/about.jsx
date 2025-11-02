@@ -8,7 +8,9 @@ const About = () => {
       </h1>
 
       <section className="space-y-4">
-        <h2 className="text-2xl md:text-3xl font-semibold">Description</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-purple-800">
+          Description
+        </h2>
         <p className="text-gray-700 text-base md:text-lg">
           The Quote Generator is a simple and responsive React webpage that
           displays quotes to the user. Built with <strong>React</strong>,{" "}
@@ -21,7 +23,9 @@ const About = () => {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl md:text-3xl font-semibold">Features</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-purple-800">
+          Features
+        </h2>
         <ul className="list-disc list-inside text-gray-700 space-y-2 text-base md:text-lg">
           <li>
             <strong>Quote Generation:</strong> A default quote is displayed
@@ -48,7 +52,9 @@ const About = () => {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl md:text-3xl font-semibold">Conclusion</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-purple-800">
+          Conclusion
+        </h2>
         <p className="text-gray-700 text-base md:text-lg">
           This project combines React, CSS, and JavaScript to provide a
           responsive and interactive user experience. Migrating it to React +
@@ -57,7 +63,9 @@ const About = () => {
       </section>
 
       <section className="space-y-2">
-        <h2 className="text-2xl md:text-3xl font-semibold">Contact</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-purple-800">
+          Contact
+        </h2>
         <p className="text-gray-700 text-base md:text-lg">
           <strong>Sumit Pati</strong> -{" "}
           <a
