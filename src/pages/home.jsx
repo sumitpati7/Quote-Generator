@@ -1,15 +1,15 @@
 import Introduction from "../components/introduction";
+import Loading from "../components/loading";
 
 export default function Home() {
   return (
     <main className="mt-20">
       <section
-        id="home"
-        className="h-[calc(100vh_-_80px)] flex justify-center items-center bg-frame"
+        id="generate"
+        className="h-[calc(100vh_-_80px)] flex justify-center items-center"
       >
-        <Introduction></Introduction>
+        <Loading></Loading>
       </section>
-      <section id="generate" className="h-screen"></section>
     </main>
   );
 }
