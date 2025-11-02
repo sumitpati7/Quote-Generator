@@ -8,6 +8,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .toggle .toggle-switch {
   position: relative;
   display: inline-block;

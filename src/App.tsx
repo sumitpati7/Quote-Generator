@@ -7,7 +7,7 @@ import About from "./pages/about";
 
 export function App() {
   return (
-    <div className="app-container">
+    <div className="app-container bg-bg dark:bg-dark color-primary">
       <Navbar></Navbar>
       <Router>
         <Routes>
