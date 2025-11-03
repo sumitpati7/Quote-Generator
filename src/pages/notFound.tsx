@@ -73,7 +73,7 @@ export default function NotFound() {
               className="inline-flex items-center gap-2 px-5 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition"
               aria-label="Go back"
             >
-              Go back
+              -Go back
             </button>
           </div>
 
