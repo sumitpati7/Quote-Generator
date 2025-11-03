@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <div className="max-w-5xl mt-20 mx-auto p-6 md:p-12 space-y-10">

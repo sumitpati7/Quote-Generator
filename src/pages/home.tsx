@@ -1,4 +1,3 @@
-import Introduction from "../components/introduction";
 import Loading from "../components/loading";
 
 export default function Home() {
