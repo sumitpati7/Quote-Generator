@@ -26,8 +26,3 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-
-      - name: 'notify vercel'
-        uses: 'vercel/repository-dispatch/actions/status@v1'
-        with:
-          name: Vercel - quote-generator: lint
