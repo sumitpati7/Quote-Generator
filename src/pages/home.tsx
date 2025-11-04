@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Shuffle, ChevronLeft, ChevronRight, Copy, Check } from 'lucide-react';
 
 // Sample quotes database
-const quotesData = {
+const quotesData : any = {
   motivation: [
     { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
     { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
@@ -49,7 +49,7 @@ export default function QuoteDisplay() {
   const currentQuotes = quotesData[genre];
   const currentQuote = currentQuotes[currentIndex];
 
-  const handleGenreChange = (newGenre) => {
+  const handleGenreChange = (newGenre: any) => {
     setIsAnimating(true);
     setTimeout(() => {
       setGenre(newGenre);
