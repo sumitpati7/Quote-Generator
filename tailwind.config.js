@@ -6,7 +6,7 @@ export default {
       colors: {
         bg: "#f8f8f8",
         darkBg: "#242424",
-        frmae: "#fefefe",
+        frame: "#fefefe",
         primary: "#41047e",
       },
     },
