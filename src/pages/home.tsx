@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Shuffle, ChevronLeft, ChevronRight, Copy, Check } from 'lucide-react';
 
 // Sample quotes database
@@ -112,7 +112,7 @@ export default function QuoteDisplay() {
           {/* Quote Display */}
           <div className={`min-h-[300px] flex flex-col justify-center items-center transition-opacity duration-300 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
             <div className="text-center mb-8">
-              <div className="text-6xl text-purple-300 mb-4">"</div>
+              <div className="text-6xl text-purple-300 mb-4">&quot;</div>
               <p className="text-2xl md:text-3xl text-gray-800 font-serif italic mb-6 px-4">
                 {currentQuote.text}
               </p>
