@@ -39,4 +39,10 @@ This project is a blend of HTML, CSS and JavaScript designed to offer users a re
 
 - Sumit Pati - sumitpati7@gmail.com
 
-Check this project at: https://charming-griffin-c0c022.netlify.app/
+## Deployment
+
+Check this project at:
+
+(v1) - https://charming-griffin-c0c022.netlify.app/
+
+(v2) - https://quote-generator.sumitpati.com.np/

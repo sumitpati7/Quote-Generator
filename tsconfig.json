@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    /* Target modern JS */
+    "target": "ES2022",
+
+    /* React JSX support */
+    "jsx": "react-jsx",
+
+    /* Modern module system for Vite */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "useDefineForClassFields": true,
+
+    /* Libraries & environments */
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+
+    /* Import settings */
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+
+    /* TypeScript behavior */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Build behavior */
+    "noEmit": true,
+
+    /* Optional cleanup */
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
